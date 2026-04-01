@@ -1,0 +1,6 @@
+# Draft notes (temporary working files)
+notes/*_draft
+notes/*_draft.*
+
+# Cursor project skills (local workflow)
+.cursor/skills/
