@@ -4,16 +4,20 @@ import java.util.ArrayDeque;
 
 public class PRG_12906 {
     static int[] solution(int[] arr) {
-        ArrayDeque<Integer> q = new ArrayDeque<>();
+        ArrayDeque<Integer> dq = new ArrayDeque<>();
 
-        for (int a : arr) {
-            if (!q.isEmpty() && q.getLast() == a) continue;
-            else q.add(a);
+        for (int num : arr) {
+            if(!dq.isEmpty() && num == dq.peekLast()) {
+                continue;
+            }
+
+            else dq.addLast(num);
         }
 
-        int[] answer = new int[q.size()];
+        int[] answer = new int[dq.size()];
         int idx = 0;
-        for (int num : q) {
+
+        for (int num : dq) {
             answer[idx++] = num;
         }
 
